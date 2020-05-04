@@ -1,0 +1,253 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.date-timer, .timer, .stopwatch {
+    position: absolute;
+    padding-top: 170px;
+    // left: 0%;
+    width: 100%;
+    height: 80vh;
+    transition: .3s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stopwatch {
+    bottom: 0;
+    height: 25vh;
+}
+
+.stopwatch-mode {
+    top: 20% !important;
+
+    span {
+        font-size: 130px !important;
+        min-width: 220px !important;
+    }
+
+    span:nth-child(2n) {
+        min-width: 34px !important;
+    }
+}
+
+#timer {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    user-select: none;
+    transition: .4s;
+    span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 135px;
+        color: #ff4242;
+        font-family: 'Monoton', cursive;
+        font-size: 80px;
+        transition: .4s;
+    }
+
+    span:nth-child(2n) {
+        min-width: 21px;
+    }
+}
+
+input[type="text"] {
+    border: none;
+    padding: 5px;
+    font-size: 25px;
+    background: #444;
+    text-align: center;
+    color: rgb(190, 190, 190);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    width: 300px;
+}
+
+.btn {
+    cursor: pointer;
+    user-select: none;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    transform: skewX(40deg);
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.1) skewX(40deg);
+    }
+
+    span {
+        display: block;
+        font-size: 25px;
+        color: white;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        transform: skewX(-40deg);
+    }
+}
+
+.start-btn {
+    background: rgb(0, 125, 141);
+}
+
+.reset-btn {
+    background: rgb(107, 35, 107);;
+}
+
+.active {
+    background: rgb(175, 175, 0);
+}
+
+.warning-container {
+    filter: brightness(70%) blur(3px) !important;
+    user-select: none;
+}
+
+.warn-window {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.warnW-active {
+    top: 0;
+}
+
+.warn-active {
+    top: 30% !important;
+}
+
+.warning {
+    position: absolute;
+    top: -600px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(40deg);
+    transition: .4s;
+    user-select: none;
+    background: #2b2b2b;
+
+    img {
+        display: block;
+        width: 40px;
+        margin-right: 10px;
+        transform: skewX(-40deg);
+    }
+
+    span {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        color: white;
+        transform: skewX(-40deg);
+    }
+}
+
+.container--full {
+    left: -100% !important;
+}
+
+.timer--full {
+    top: 35% !important;
+    
+    span {
+        min-width: 304px !important;
+        font-size: 180px !important;
+    }
+
+    span:nth-child(2n) {
+        min-width: 34px !important;
+    }
+}
+
+// Right bottom panel
+.manage-panel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 50px 0;
+    box-sizing: border-box;
+    height: 40px;
+    min-width: 200px;
+
+    &:hover .panel {
+        opacity: 1;
+        border-radius: 5px;
+        background: rgba($color: #000000, $alpha: .2);
+    }
+
+    .panel {
+        height: 40px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: .2s;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        i {
+            cursor: pointer;
+            font-size: 22px;
+            color: #d94221;
+            transition: .3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+            
+        }
+
+        img{
+            position: relative;
+            cursor: pointer;
+            height: 100%;
+            transition: .3s;
+            margin-left: 20px;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.mode--active {
+    color: #03a9f4 !important;
+}
+
+// MDOE-WINDOWS
+.scr--able {
+    display: flex;
+    left: 0;
+}
+
+.scr--disable {
+    left: -100%;
+}
+
+// Timer btn's
+.timer-start-btn {
+    margin-top: 150px;
+}

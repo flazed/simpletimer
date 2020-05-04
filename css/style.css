@@ -1,0 +1,322 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.date-timer, .timer, .stopwatch {
+  position: absolute;
+  padding-top: 170px;
+  width: 100%;
+  height: 80vh;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stopwatch {
+  bottom: 0;
+  height: 25vh;
+}
+
+.stopwatch-mode {
+  top: 20% !important;
+}
+
+.stopwatch-mode span {
+  font-size: 130px !important;
+  min-width: 220px !important;
+}
+
+.stopwatch-mode span:nth-child(2n) {
+  min-width: 34px !important;
+}
+
+#timer {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#timer span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 135px;
+  color: #ff4242;
+  font-family: 'Monoton', cursive;
+  font-size: 80px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#timer span:nth-child(2n) {
+  min-width: 21px;
+}
+
+input[type="text"] {
+  border: none;
+  padding: 5px;
+  font-size: 25px;
+  background: #444;
+  text-align: center;
+  color: #bebebe;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  width: 300px;
+}
+
+.btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  -webkit-transform: skewX(40deg);
+          transform: skewX(40deg);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1) skewX(40deg);
+          transform: scale(1.1) skewX(40deg);
+}
+
+.btn span {
+  display: block;
+  font-size: 25px;
+  color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  -webkit-transform: skewX(-40deg);
+          transform: skewX(-40deg);
+}
+
+.start-btn {
+  background: #007d8d;
+}
+
+.reset-btn {
+  background: #6b236b;
+}
+
+.active {
+  background: #afaf00;
+}
+
+.warning-container {
+  -webkit-filter: brightness(70%) blur(3px) !important;
+          filter: brightness(70%) blur(3px) !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.warn-window {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.warnW-active {
+  top: 0;
+}
+
+.warn-active {
+  top: 30% !important;
+}
+
+.warning {
+  position: absolute;
+  top: -600px;
+  width: 400px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: skewX(40deg);
+          transform: skewX(40deg);
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #2b2b2b;
+}
+
+.warning img {
+  display: block;
+  width: 40px;
+  margin-right: 10px;
+  -webkit-transform: skewX(-40deg);
+          transform: skewX(-40deg);
+}
+
+.warning span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  color: white;
+  -webkit-transform: skewX(-40deg);
+          transform: skewX(-40deg);
+}
+
+.container--full {
+  left: -100% !important;
+}
+
+.timer--full {
+  top: 35% !important;
+}
+
+.timer--full span {
+  min-width: 304px !important;
+  font-size: 180px !important;
+}
+
+.timer--full span:nth-child(2n) {
+  min-width: 34px !important;
+}
+
+.manage-panel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  min-width: 200px;
+}
+
+.manage-panel:hover .panel {
+  opacity: 1;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.manage-panel .panel {
+  height: 40px;
+  width: 100%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.manage-panel .panel i {
+  cursor: pointer;
+  font-size: 22px;
+  color: #d94221;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.manage-panel .panel i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.manage-panel .panel img {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: 20px;
+}
+
+.manage-panel .panel img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mode--active {
+  color: #03a9f4 !important;
+}
+
+.scr--able {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+}
+
+.scr--disable {
+  left: -100%;
+}
+
+.timer-start-btn {
+  margin-top: 150px;
+}
+/*# sourceMappingURL=style.css.map */

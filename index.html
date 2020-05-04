@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Таймер/Секундомер</title>
+</head>
+<body>
+    <div class="timer-numbers" id="timer">
+        <span id="timer-hours">00</span>
+        <span>:</span>
+        <span id="timer-minutes">00</span>
+        <span>:</span>
+        <span id="timer-seconds">00</span>
+    </div>
+
+    <div class="date-timer scr--able">
+        <input type="text" id="y" placeholder="Введите год">
+        <input type="text" id="m" placeholder="Введите месяц">
+        <input type="text" id="d" placeholder="Введите день">
+        <input type="text" id="h" placeholder="Введите часы">
+        <input type="text" id="min" placeholder="Введите минуты">
+
+        <div class="btn start-btn"><span>Start</span></div>
+        <div class="btn reset-btn"><span>Reset</span></div>
+    </div>
+
+    <div class="timer scr--disable">
+        <input type="text" id="hT" placeholder="Введите часы">
+        <input type="text" id="minT" placeholder="Введите минуты">
+        <input type="text" id="secT" placeholder="Введите секунды">
+        <div class="btn start-btn timer-start-btn"><span>Start</span></div>
+        <div class="btn reset-btn timer-reset-btn"><span>Reset</span></div>
+    </div>
+    
+    <div class="stopwatch scr--disable">
+        <div class="btn start-btn stopwatch-start-tn"><span>Start</span></div>
+        <div class="btn reset-btn stopwatch-reset-btn"><span>Reset</span></div>
+    </div>
+
+    <div class="manage-panel">
+        <div class="panel">
+            <i class="fa fa-calendar-alt" data-mode="date-timer"></i>
+            <i class="far fa-clock" data-mode="timer"></i>
+            <i class="fas fa-stopwatch-20" data-mode="stopwatch"></i>
+            <img src="img/fullscr.png" id="fullSCR" alt="">
+        </div>
+    </div>
+
+    <div class="warn-window">
+        <div class="warning">
+            <img src="img/warn.png" alt="Date warning!">
+            <span>Некорекктная дата!</span>
+        </div>
+    </div>
+    
+    <script src="js/cookie.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/stopwatch.js"></script>
+</body>
+</html>
